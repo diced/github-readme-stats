@@ -63,7 +63,7 @@ function calculateRank({
 
   const normalizedScore = normalcdf(score, TOTAL_VALUES, ALL_OFFSETS) * 100;
 
-  return { level: 'S+', score: normalizedScore };
+  return { level: 'S+', score: 0 };
 }
 
 module.exports = calculateRank;
