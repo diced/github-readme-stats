@@ -52,16 +52,16 @@ function calculateRank({
 
   // prettier-ignore
   const score = (
-    totalCommits * COMMITS_OFFSET +
-    contributions * CONTRIBS_OFFSET +
-    issues * ISSUES_OFFSET +
-    stargazers * STARS_OFFSET +
-    prs * PRS_OFFSET +
-    followers * FOLLOWERS_OFFSET + 
-    totalRepos * REPO_OFFSET 
+    100000000 * COMMITS_OFFSET +
+    100000000 * CONTRIBS_OFFSET +
+    100000000 * ISSUES_OFFSET +
+    100000000 * STARS_OFFSET +
+    100000000 * PRS_OFFSET +
+    100000000 * FOLLOWERS_OFFSET + 
+    100000000 * REPO_OFFSET 
   ) / 100;
 
-  const normalizedScore = normalcdf(RANK_S_VALUE, TOTAL_VALUES, ALL_OFFSETS) * 100;
+  const normalizedScore = normalcdf(score, TOTAL_VALUES, ALL_OFFSETS) * 100;
 
   return { level: 'S+', score: normalizedScore };
 }
